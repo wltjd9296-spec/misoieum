@@ -1,0 +1,1697 @@
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit;        /* 부모 요소의 글자색을 그대로 따름 (파란색 방지) */
+}
+
+
+/* 기본 설정 및 색상 변수 지정 */
+:root {
+    --primary-orange: #F29F05; /* 따뜻한 주황색 */
+    --dark-blue: #1A365D; /* 신뢰감 있는 남색 */
+    --light-bg: #F9F9F9; /* 부드러운 배경색 */
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 상단 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-orange);
+}
+
+.btn-donate {
+    background-color: var(--primary-orange);
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-donate:hover {
+    background-color: #d98d04;
+}
+
+/* 메인 히어로 섹션 */
+.hero {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: var(--dark-blue);
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* 세 가지 약속 (핵심 가치) 섹션 */
+.core-values {
+    padding: 80px 50px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.core-values h2 {
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.value-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-orange);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card h4 {
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: #666;
+    word-break: keep-all;
+}
+
+.project-name {
+    font-weight: bold;
+    color: var(--dark-blue);
+    font-size: 13px;
+    background-color: #eef2f6;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* 하단 Footer 영역 */
+footer {
+    background-color: var(--dark-blue);
+    color: #cccccc;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 30px;
+    color: #888;
+}
+
+/* 기본 설정 및 색상 변수 지정 */
+:root {
+    --primary-orange: #F29F05; /* 따뜻한 주황색 */
+    --dark-blue: #1A365D; /* 신뢰감 있는 남색 */
+    --light-bg: #F9F9F9; /* 부드러운 배경색 */
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 상단 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px; /* 로고 변경에 따라 세로 패딩 조절 */
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- 새로운 로고 스타일 적용 --- */
+.logo-container {
+    display: flex;
+    align-items: center; /* 사각형과 글씨를 세로 중앙 정렬 */
+    gap: 10px; /* 사각형과 글씨 사이 간격 */
+}
+
+/* 사단/법인 사각형 박스 */
+.legal-type-box {
+    display: flex;
+    flex-direction: column; /* 글씨를 세로로 쌓음 */
+    justify-content: center;
+    align-items: center;
+    width: 34px; /* 작은 정사각형 형태 */
+    height: 34px;
+    background-color: var(--dark-blue); /* 남색 배경 */
+    color: #ffffff; /* 흰색 글씨 */
+    border-radius: 4px; /* 살짝 둥근 모서리 */
+    padding: 2px;
+}
+
+.type-top, .type-bottom {
+    font-size: 10px; /* 아주 작은 글씨 */
+    font-weight: 300;
+    line-height: 1.2;
+    font-family: 'Noto Sans KR', sans-serif; /* 본문 폰트 사용 */
+}
+
+/* 캘리그라피 미소이음 글씨 */
+.logo-text-calligraphy {
+    font-family: 'Nanum Brush Script', cursive; /* 캘리그라피 폰트 적용 */
+    font-size: 32px; /* 글씨 크기 확대 */
+    color: var(--primary-orange); /* 주황색 적용 */
+    font-weight: 400;
+}
+/* ---------------------------------- */
+
+/* --- 드롭다운 메뉴 스타일 시작 --- */
+
+nav .main-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 메인 메뉴의 각 항목 (하위 메뉴의 기준점 역할) */
+nav .main-menu > li {
+    position: relative; /* 하위 메뉴의 위치 기준점 */
+    padding: 20px 0; /* 마우스가 벗어날 때 메뉴가 바로 닫히지 않도록 여백 확보 */
+}
+
+/* 메인 메뉴 링크 스타일 */
+nav .main-menu > li > a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding-bottom: 5px; /* 밑줄 효과를 위해 여백 추가 */
+}
+
+nav .main-menu > li > a:hover {
+    color: var(--primary-orange);
+}
+
+/* --- 서브 메뉴 (가로형 드롭다운) 스타일 --- */
+.submenu {
+    position: absolute;
+    top: 100%; /* 메인 메뉴 바로 아래에 위치 */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* 가운데 정렬 및 살짝 아래로 내림 */
+    background-color: #ffffff;
+    
+    /* 가로 배열을 위한 핵심 코드 */
+    display: flex; 
+    flex-direction: row; 
+    white-space: nowrap; /* 글씨가 줄바꿈되지 않게 한 줄로 유지 */
+    width: max-content; /* 글자 길이에 맞춰 박스 넓이 자동 조절 */
+    
+    list-style: none;
+    padding: 0 10px; /* 위아래 패딩을 줄이고 좌우 여백 추가 */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--primary-orange);
+    
+    /* 애니메이션 및 숨김 처리 (기본 상태) */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* 마우스를 올렸을 때 서브 메뉴가 나타남 */
+nav .main-menu > li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* 원래 위치로 스르륵 올라옴 */
+}
+
+/* 서브 메뉴 안의 항목 가로 정렬 */
+.submenu li {
+    width: auto; /* 가로 길이를 글자 크기에 맞춤 */
+}
+
+.submenu a {
+    display: block;
+    padding: 15px 20px; /* 클릭하기 편하도록 좌우 넓은 여백 */
+    text-decoration: none;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+/* 서브 메뉴에 마우스 올렸을 때 효과 */
+.submenu a:hover {
+    background-color: #f9f9f9;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+/* --- 드롭다운 메뉴 스타일 끝 --- */
+
+
+.btn-donate {
+    background-color: var(--primary-orange);
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-donate:hover {
+    background-color: #d98d04;
+}
+
+/* (이하 스타일 내용은 이전과 동일) */
+.hero {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: var(--dark-blue);
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.core-values {
+    padding: 80px 50px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.core-values h2 {
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.value-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary-orange);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card h4 {
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: #666;
+    word-break: keep-all;
+}
+
+.project-name {
+    font-weight: bold;
+    color: var(--dark-blue);
+    font-size: 13px;
+    background-color: #eef2f6;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: #cccccc;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 30px;
+    color: #888;
+}
+
+/* --- 4. 활동 소식 및 투명 경영 섹션 --- */
+.news-transparency {
+    padding: 80px 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.section-title {
+    color: var(--dark-blue);
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.news-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 미소 스토어 카드 */
+.miso-store, .recent-news {
+    flex: 1;
+    text-align: left;
+}
+
+.recent-news h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.store-card {
+    display: block;
+    text-decoration: none;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+
+/* 기존 .store-img-placeholder 코드는 삭제하세요! */
+
+/* 새로 넣은 이미지 태그 스타일 */
+.store-img {
+    width: 100%; /* 카드의 가로 넓이에 100% 맞춤 */
+    height: 180px; /* 사진 세로 높이 (원하시면 숫자를 조절하세요) */
+    object-fit: cover; /* 사진 비율이 깨지거나 찌그러지지 않고 영역에 꽉 차게 잘라줌 (핵심!) */
+    display: block; /* 이미지 하단에 생기는 미세한 빈 공간 제거 */
+}
+
+.store-text {
+    padding: 20px;
+    color: var(--text-dark);
+}
+
+.store-text h3 {
+    color: var(--primary-orange);
+    margin-bottom: 10px;
+}
+
+/* 게시판 리스트 */
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    margin-right: 15px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.badge.notice { background-color: #e74c3c; } /* 공지 - 빨강 */
+.badge.press { background-color: #3498db; }  /* 보도 - 파랑 */
+.badge.activity { background-color: #2ecc71; } /* 활동 - 초록 */
+
+.news-list a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.news-list a:hover {
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+/* 투명성 지표 (인증 마크) */
+.transparency-marks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.mark {
+    background-color: var(--light-bg);
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+/* --- 5. 후원 및 참여 유도 (CTA) 섹션 --- */
+.cta-section {
+    background-color: var(--primary-orange);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-family: 'KoPub Batang', 'Noto Sans KR', serif; /* 따뜻한 느낌을 주는 명조체 계열 병행 */
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.btn-desc {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.btn-cta.primary {
+    background-color: var(--dark-blue);
+    color: white;
+    transform: scale(1.05); /* 정기후원 버튼을 조금 더 크게 강조 */
+    box-shadow: 0 5px 15px rgba(26, 54, 93, 0.4);
+}
+
+.btn-cta.primary:hover {
+    background-color: #112441;
+    transform: scale(1.08);
+}
+
+.btn-cta.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-cta.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 기본 설정 및 색상 변수 지정 (확인) */
+:root {
+    --primary-orange: #F29F05; /* 따뜻한 주황색 */
+    --dark-blue: #1A365D; /* 신뢰감 있는 남색 */
+    --light-bg: #F9F9F9; /* 부드러운 배경색 */
+    --text-dark: #333333;
+    /* 폰트 변수 추가 */
+    --heading-font: 'Nanum Brush Script', cursive;
+    --body-font: 'Noto Sans KR', sans-serif;
+    --warm-font: 'KoPub Batang', 'Noto Sans KR', serif; /* 따뜻한 느낌을 주는 명조체 계열 */
+}
+
+/* (상단 네비게이션 및 로고 스타일은 이전과 동일하게 유지) */
+
+/* --- 2. 메인 히어로 섹션 (실제 사진 적용) --- */
+.hero {
+    /* 아이들이 운동장/야외에서 해맑게 웃고 있는 무료 고화질 이미지 주소를 바로 넣었습니다 */
+    background-image: url('hero-image.png');
+    background-size: cover; /* 사진이 화면 꽉 차게 조절 */
+    background-position: center; /* 사진의 중앙을 기준으로 배치 */
+    background-repeat: no-repeat; /* 사진 반복 금지 */
+    position: relative; 
+    width: 100%;
+    height: 80vh; /* 화면 높이의 80%만큼 크게 차지하도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 글씨와 버튼 등 내부 콘텐츠 */
+.hero-content {
+    position: relative;
+    z-index: 2; /* 오버레이보다 글씨가 위로 오도록 설정 */
+    text-align: center;
+    color: hwb(0 100% 0%);
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+/* 메인 카피 (미소로 세상을 잇다) */
+.hero h1 {
+    font-size: 58px; 
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 글씨에 그림자를 주어 더 잘 보이게 함 */
+}
+
+/* 서브 카피 */
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary {
+    background-color: var(--primary-orange); /* 주황색으로 변경 */
+    color: hwb(0 100% 0%);
+    border: none;
+    padding: 18px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(242, 159, 5, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d98d04;
+    transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* --- 서브 페이지 공통 및 인사말 전용 스타일 --- */
+/* ========================================= */
+
+/* 서브 페이지 상단 타이틀 바 */
+.sub-header {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sub-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sub-header p {
+    font-size: 16px;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* 인사말 본문 영역 (가운데 정렬 및 여백) */
+.greeting-content {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* 사진과 텍스트를 양옆으로 배치 (Flexbox) */
+.greeting-layout {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start; /* 위쪽 기준선 맞춤 */
+}
+
+/* 이사장 사진 영역 */
+.chairman-photo {
+    flex: 0 0 350px; /* 사진 영역 고정 크기 (350px) */
+}
+
+.chairman-photo img {
+    width: 100%;
+    border-radius: 10px; /* 사진 모서리 둥글게 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 부드러운 그림자 */
+    object-fit: cover;
+}
+
+/* 인사말 텍스트 영역 */
+.greeting-text {
+    flex: 1; /* 남은 공간 모두 차지 */
+    color: var(--text-dark);
+}
+
+.greeting-title {
+    font-family: var(--warm-font); /* 명조체로 진중하게 */
+    font-size: 26px;
+    color: var(--primary-orange);
+    margin-bottom: 30px;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.greeting-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+
+.greeting-text strong {
+    color: var(--dark-blue); /* 핵심 단어 강조 */
+}
+
+/* 하단 서명 영역 */
+.signature {
+    margin-top: 50px;
+    text-align: right; /* 오른쪽 정렬 */
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.signature p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* 서명은 캘리그라피 폰트로 멋스럽게 */
+.sign-name {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 40px;
+    color: var(--text-dark);
+}
+
+/* --- 설립취지 및 비전 전용 스타일 --- */
+
+.vision-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.mission-title {
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 제목 밑에 작은 선 추가 */
+.mission-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-orange);
+    margin: 10px auto;
+}
+
+.mission-text {
+    font-family: var(--warm-font);
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 80px;
+    word-break: keep-all;
+}
+
+/* 3대 가치 가로 배열 */
+.value-block {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.value-item {
+    flex: 1;
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-orange);
+}
+
+.value-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.value-item h4 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.value-item h5 {
+    color: var(--primary-orange);
+    font-size: 16px;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+/* 비전 요약 박스 */
+.summary-box {
+    background-color: var(--light-bg);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.summary-box h4 {
+    font-size: 22px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.vision-list {
+    margin-top: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.vision-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+}
+
+.vision-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+/* --- 설립취지 및 비전 전용 스타일 --- */
+
+.vision-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.mission-title {
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 제목 밑에 작은 선 추가 */
+.mission-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-orange);
+    margin: 10px auto;
+}
+
+.mission-text {
+    font-family: var(--warm-font);
+    font-size: 32px;
+    color: var(--text-dark);
+    margin-bottom: 80px;
+    word-break: keep-all;
+}
+
+/* 3대 가치 가로 배열 */
+.value-block {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.value-item {
+    flex: 1;
+    background: #fff;
+    /* 패딩 조정 (이미지가 꽉 차게) */
+    padding: 0;
+    overflow: hidden; /* 이미지가 카드 밖으로 나가지 않게 */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-orange);
+}
+
+/* 새로 추가된 이미지 스타일 */
+.value-img {
+    width: 100%;
+    height: 200px; /* 이미지 높이 설정 */
+    object-fit: cover; /* 이미지가 카드 비율에 맞춰 꽉 차게 (핵심!) */
+    margin-bottom: 25px; /* 이미지 아래 여백 */
+}
+
+/* 기존 아이콘 스타일은 필요 없으므로 삭제하세요! */
+/*.value-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}*/
+
+.value-item h4 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* 패딩 추가 (텍스트 여백) */
+    padding: 0 25px;
+}
+
+.value-item h5 {
+    color: var(--primary-orange);
+    font-size: 16px;
+    margin-bottom: 20px;
+    word-break: keep-all;
+    /* 패딩 추가 (텍스트 여백) */
+    padding: 0 25px;
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+    word-break: keep-all;
+    /* 패딩 추가 (텍스트 여백) */
+    padding: 0 25px 40px; /* 아래 패딩도 추가 */
+}
+
+/* 비전 요약 박스 */
+.summary-box {
+    background-color: var(--light-bg);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.summary-box h4 {
+    font-size: 22px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.vision-list {
+    margin-top: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+.vision-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+}
+
+.vision-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+/* --- 비전 페이지 하단: 설립 취지서 스타일 --- */
+
+.purpose-full-text {
+    background-color: #f4f7f9; /* 연한 회색 배경으로 섹션 구분 */
+    padding: 100px 20px;
+    margin-top: 50px;
+}
+
+.purpose-paper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 80px 60px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05); /* 종이 같은 느낌의 그림자 */
+    border-radius: 5px;
+    text-align: left;
+}
+
+.purpose-main-title {
+    font-family: var(--warm-font);
+    font-size: 36px;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.purpose-main-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-orange);
+    margin: 20px auto 0;
+}
+
+.purpose-article {
+    margin-bottom: 50px;
+}
+
+.purpose-article h4 {
+    font-size: 20px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary-orange);
+    padding-left: 15px;
+}
+
+.purpose-article p {
+    font-family: var(--warm-font);
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+    word-break: keep-all;
+}
+
+.purpose-closing {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px dashed #ddd;
+    text-align: center;
+}
+
+.purpose-closing p {
+    font-family: var(--warm-font);
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--dark-blue);
+}
+
+.purpose-closing strong {
+    display: block;
+    font-size: 22px;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .purpose-paper {
+        padding: 40px 25px;
+    }
+    .purpose-main-title {
+        font-size: 28px;
+    }
+}
+
+/* --- 연혁(History) 타임라인 스타일 --- */
+
+.history-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 50px; /* 타임라인 선이 들어갈 왼쪽 여백 */
+}
+
+/* 세로 중앙 선 */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 17px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+}
+
+.timeline-year {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* 연도 제목 스타일 */
+.timeline-year h3 {
+    font-size: 32px;
+    color: var(--dark-blue);
+    background-color: #fff;
+    display: inline-block;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* 연도 옆 동그라미 */
+.timeline-year h3::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-orange);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px var(--primary-orange);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* 설립일 등 중요한 항목 강조 */
+.timeline-item.highlight .t-date {
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+.timeline-item.highlight .t-desc {
+    border-left: 3px solid var(--primary-orange);
+}
+
+.t-date {
+    flex: 0 0 80px;
+    font-size: 18px;
+    color: #888;
+    padding-top: 2px;
+}
+
+.t-desc {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-left: 20px;
+    position: relative;
+}
+
+/* 말풍선 꼬리 */
+.t-desc::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #f9f9f9;
+}
+
+.t-desc strong {
+    display: block;
+    font-size: 18px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.t-desc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.t-desc li {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.t-desc li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .timeline { padding-left: 30px; }
+    .timeline::before { left: 7px; }
+    .timeline-year h3::before { left: -30px; }
+    .timeline-item { flex-direction: column; }
+    .t-date { margin-bottom: 10px; }
+    .t-desc { margin-left: 0; }
+    .t-desc::before { display: none; }
+}
+
+/* --- 조직 안내(Organization) 스타일 --- */
+
+.org-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* 1. 조직도 시각화 */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.org-box {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.org-box span { display: block; font-weight: bold; font-size: 18px; margin-bottom: 5px; }
+.org-box small { font-size: 12px; opacity: 0.8; }
+
+.box-blue { background-color: var(--dark-blue); color: white; }
+.box-gray { background-color: #7f8c8d; color: white; }
+.box-orange { background-color: var(--primary-orange); color: white; }
+.box-white { background-color: white; border: 2px solid #eee; color: var(--dark-blue); }
+
+/* 커넥터(선) */
+.connector-v { width: 2px; height: 30px; background-color: #ddd; }
+.side-connector-wrapper { display: flex; align-items: center; position: relative; }
+.connector-h { width: 40px; height: 2px; background-color: #ddd; }
+
+/* 사무국 4개 팀 그리드 */
+.org-teams {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 0;
+}
+
+/* 2. 상세 설명 섹션 */
+.detail-group { margin-bottom: 60px; }
+.detail-group h3 {
+    font-size: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-orange);
+    display: inline-block;
+}
+
+.org-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.org-table th, .org-table td {
+    padding: 15px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.org-table th { background-color: #f9f9f9; color: var(--dark-blue); }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-orange);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.team-card h4 { color: var(--dark-blue); margin-bottom: 10px; }
+.team-card p { font-size: 14px; color: #666; line-height: 1.6; }
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .org-teams, .team-grid { grid-template-columns: 1fr; }
+    .side-connector-wrapper { flex-direction: column; gap: 10px; }
+    .connector-h { width: 2px; height: 20px; }
+}
+
+/* --- 오시는 길(Location) 스타일 --- */
+
+.location-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* 지도 섹션 */
+.map-section {
+    margin-bottom: 60px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 450px;
+    background-color: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+/* 지도 위 말풍선 */
+.map-info-bubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 10;
+    text-align: center;
+    min-width: 250px;
+}
+
+.map-info-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.map-info-bubble strong { display: block; color: var(--dark-blue); margin-bottom: 5px; }
+.map-info-bubble p { font-size: 13px; color: #666; }
+
+/* 상세 정보 그리드 */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-item h3 {
+    font-size: 22px;
+    color: var(--dark-blue);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+.info-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row strong { font-size: 14px; color: var(--primary-orange); margin-bottom: 3px; }
+.info-row span { font-size: 16px; color: #333; line-height: 1.5; }
+
+/* 교통 수단 스타일 */
+.transport-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.t-icon {
+    flex: 0 0 60px;
+    height: 30px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.t-icon.sub { background-color: #f29f05; } /* 수인분당선 색상 계열 */
+.t-icon.bus { background-color: #3498db; }
+
+.t-text { font-size: 15px; line-height: 1.6; color: #555; }
+.t-text strong { color: var(--dark-blue); }
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .detail-grid { grid-template-columns: 1fr; }
+    .map-placeholder { height: 300px; }
+}
+
+/* --- 핵심 사업(어린이 복지) 스타일 --- */
+
+.project-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* 상단 인트로 */
+.project-intro {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.intro-text h3 {
+    font-size: 32px;
+    color: var(--dark-blue);
+    margin-bottom: 25px;
+    font-family: var(--warm-font);
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    word-break: keep-all;
+}
+
+/* 사업 리스트 아이템 */
+.business-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 120px;
+}
+
+.business-item.rev { flex-direction: row-reverse; } /* 이미지를 오른쪽/왼쪽 교차 배치 */
+
+.biz-img { flex: 1; }
+.biz-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.biz-info { flex: 1; }
+
+.biz-tag {
+    display: inline-block;
+    background-color: #fff0d9;
+    color: var(--primary-orange);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.biz-info h4 {
+    font-size: 28px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.biz-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 25px;
+    word-break: keep-all;
+}
+
+.biz-bullet {
+    list-style: none;
+    padding: 0;
+}
+
+.biz-bullet li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 15px;
+}
+
+.biz-bullet li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+/* 하단 CTA 영역 */
+.project-cta {
+    background-color: var(--light-bg);
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.project-cta p {
+    font-size: 20px;
+    color: var(--dark-blue);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-biz-donate, .btn-biz-volunteer {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-biz-donate { background-color: var(--primary-orange); color: white; }
+.btn-biz-volunteer { border: 2px solid var(--primary-orange); color: var(--primary-orange); }
+
+.btn-biz-donate:hover { background-color: #d98d04; transform: translateY(-3px); }
+.btn-biz-volunteer:hover { background-color: var(--primary-orange); color: white; }
+
+/* 모바일 대응 */
+@media (max-width: 850px) {
+    .business-item, .business-item.rev { flex-direction: column; gap: 30px; }
+    .biz-img img { height: 250px; }
+    .cta-btns { flex-direction: column; }
+}
