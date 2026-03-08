@@ -1695,3 +1695,11 @@ footer {
     .biz-img img { height: 250px; }
     .cta-btns { flex-direction: column; }
 }
+
+/* --- 장애인 복지 페이지 전용 헤더 색상 (선택사항) --- */
+.project-header-disabled {
+    background-color: #2c3e50; /* 조금 더 짙고 차분한 색상으로 신뢰감 부여 */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
